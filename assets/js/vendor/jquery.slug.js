@@ -27,7 +27,7 @@ jQuery.fn.slug = function (options) {
             slugContent = $theUnSlug.val(),
             slugContentHyphens = slugContent.replace(/\s+/g, '-'),
             slugNoAccents = normalize(slugContentHyphens),
-            finishedSlug = slugNoAccents.replace(/[^a-zA-Z0-9\-]/g, '');
+            finishedSlug = slugNoAccents.replace(/[^ก-๙a-zA-Z0-9\-]/g, '');
         slugContainer.val(finishedSlug.toLowerCase());
     };
 
