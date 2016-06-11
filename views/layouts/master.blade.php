@@ -56,6 +56,14 @@
 @foreach($jsFiles as $js)
     <script src="{{ URL::asset($js) }}" type="text/javascript"></script>
 @endforeach
+<script>
+    CKEDITOR.config.height = 500;
+    CKEDITOR.config.contentsCss = [
+        "https://fonts.googleapis.com/css?family=Kanit:400,200,700&subset=thai,latin",
+        "{{ url('/themes/'.strtolower(setting('core::template')).'/css/styles.min.css') }}"
+    ];
+</script>
+
 <?php if (is_module_enabled('Notification')): ?>
     <script src="https://js.pusher.com/3.0/pusher.min.js"></script>
     <script src="{{ Module::asset('notification:js/pusherNotifications.js') }}"></script>
